@@ -15,7 +15,7 @@ const signupInitialValues = {
   ingredient: [],
   steps: [],
   type: "",
-  allergies: [],
+  // allergies: [],
   photo: "",
 };
 const initialStep = {
@@ -67,7 +67,7 @@ const AddRecipe = () => {
     if (allergy === "") return;
     setSignup({
       ...signup,
-      allergies: [...signup.allergies, { allergy: allergy }],
+      // allergies: [...signup.allergies, { allergy: allergy }],
     });
     setAllergy("");
   };
@@ -236,25 +236,25 @@ const AddRecipe = () => {
           />
         </Form.Group>
         <Row>
-          <Form.Group as={Col}>
-            <Form.Label style={{ fontSize: 20, color: "black" }}>
+          {/* <Form.Group as={Col}> */}
+            {/* <Form.Label style={{ fontSize: 20, color: "black" }}>
               <span>Allergies</span>
-            </Form.Label>
-            <Form.Control
+            </Form.Label> */}
+            {/* <Form.Control
               onChange={(e) => onAllergyChange(e)}
               value={allergy}
               name="allergy"
               placeholder="Enter allergy"
-            />
-            <Button
+            /> */}
+            {/* <Button
               size="lg"
               variant="success"
               onClick={() => addAllergyHandler()}
               style={{marginLeft:'auto',marginRight:'auto' , marginTop: 20, display: 'block'}}
             >
               Add Allergy
-            </Button>
-          </Form.Group>
+            </Button> */}
+          {/* </Form.Group> */}
           <Form.Group as={Col}>
             <Form.Label style={{ fontSize: 20, color: "black" }}>
               <span>Photo</span>

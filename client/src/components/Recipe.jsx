@@ -71,15 +71,15 @@ const Recipe = () => {
           </Row>
           <Container fluid>
             <Row style={{marginTop:'10px'}}>
-              <Col>
+              {/* <Col>
                 <Card style={{marginTop:'10px',padding:10}}>
                   <h4>Allergies</h4>
                     {recipedata[0].allergies.map((allergy) => (
                       <p>{allergy.allergy}</p>
                     ))}
                     {/* <span>{recipedata[0].allergies}</span> */}
-                </Card>
-              </Col>
+                {/* </Card>
+              </Col> */} */}
               <Col>
                 <Card style={{marginTop:'10px',padding:10}}>
                   <h4>Time </h4>

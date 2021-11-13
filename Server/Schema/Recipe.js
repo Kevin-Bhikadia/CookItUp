@@ -33,11 +33,11 @@ const recipe = new mongoose.Schema({
     type: "string",
     required: true,
   },
-  allergies: [
-    {
-      allergy: "string",
-    },
-  ],
+  // allergies: [
+    // {
+    //   allergy: "string",
+    // },
+  // ],
   photo: {
     type: "string",
     required: true,
