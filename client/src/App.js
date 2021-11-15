@@ -9,6 +9,8 @@ import Login from "./components/Login.jsx";
 import LoginState from "./controller/loginstate.jsx";
 import Signup from "./components/Signup.jsx";
 import AddRecipe from "./components/AddRecipe.jsx";
+import AdminLogin from "./components/AdminLogin.jsx";
+import Update from "./components/Update"
 
 function App() {
 	return (
@@ -19,8 +21,11 @@ function App() {
 					<Route exact path='/' component={RecipeCard} /> 
 					<Route exact path='/Login' component={Login} />
 					<Route exact path='/Signup' component={Signup} />
+					<Route exact path='/Update' component={Update} />
+					<Route exact path="/AdminLogin" component={AdminLogin} />
 					<Route exact path="/add" component={AddRecipe} />
 					<Route path="/recipe/:id" component={Recipe} />
+					
 				</Switch>
 			</BrowserRouter>
 		</LoginState>

@@ -103,11 +103,16 @@ const RecipeCard = () => {
                 </div>
               </Card.Text>
               <Card.Text>{recipe.introduction}</Card.Text>
-              <div style={buttonStyle}>
+              <Row  >
+              <div style={buttonStyle, {marginLeft: "5%", marginTop: 5 }} >
                 <Link to={`/recipe/${recipe._id}`}>
                   <Button variant="primary">Go to Recipe</Button>
                 </Link>
+                </div>
+                <div style={buttonStyle, {marginLeft: "5%", marginTop: 5 }} >
+                <Button variant="primary">Delete</Button>
               </div>
+              </Row>
             </Card.Body>
           </Card>
         </Col>

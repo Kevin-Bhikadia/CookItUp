@@ -79,7 +79,7 @@ const Recipe = () => {
                     ))}
                     {/* <span>{recipedata[0].allergies}</span> */}
                 {/* </Card>
-              </Col> */} */}
+              {/* </Col> */} 
               <Col>
                 <Card style={{marginTop:'10px',padding:10}}>
                   <h4>Time </h4>
