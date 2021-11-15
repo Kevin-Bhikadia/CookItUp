@@ -34,7 +34,7 @@ const Login = () => {
     // alert("login successfully");
     setAccount(login.username);
     setLogin(loginInitialValues);
-    history.push("/Update");
+    history.push("/");
   };
 
   return (

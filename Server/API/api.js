@@ -41,6 +41,13 @@ router.post("/recipe/add", async (req, res, err) => {
       .catch((err) => console.log(err));
   }
 });
+router.post('/recipe/delete', async (req,res,next) => {
+  console.log(req.body._id);
+  console.log("hello");
+  Recipe.findOneAndDelete({ _id: req.body._id})
+  .then(data => res.json(data))
+  .catch(err => console.log(err));
+})
 
 router.get("/recipe/search", async (req, res, err) => {
   // console.log(req);

@@ -54,7 +54,7 @@ const AddRecipe = () => {
 
   const addStepHandler = (e) => {
     if (step.description === "" || step.photo === "") {
-      console.log("kindly please enter both the detials");
+      console.log("kindly please enter both the details");
       return;
     }
     setSignup({ ...signup, steps: step });
@@ -88,12 +88,12 @@ const AddRecipe = () => {
       alert("invalid signup");
       return;
     }
-    alert("signup successfully");
+    alert("Recipe added successfully!!");
     setSignup(signupInitialValues);
     setAllergy("");
     setIngredient("");
     setStep(initialStep);
-    history.push("/login");
+    history.push("/");
   };
 
   return (

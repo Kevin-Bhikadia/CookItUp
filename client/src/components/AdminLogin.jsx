@@ -10,7 +10,7 @@ const loginInitialValues = {
   password: "",
 };
 
-const Login = () => {
+const AdminLogin = () => {
   const [login, setLogin] = useState(loginInitialValues);
 
   const { account, setAccount } = useContext(LoginContext);
@@ -98,4 +98,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdminLogin;

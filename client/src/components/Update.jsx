@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { recipeDelete } from '../service/service';
 import axios from "axios";
 import Speech from "react-speech";
 
@@ -58,9 +59,12 @@ const type_color = {
   'nonveg': 'danger', 
   'vegan': 'warning'
 }
-
+const del_recipe = {
+  '_id': ""
+}
 const RecipeCard = () => {
   const [recipes, setRecipes] = useState([]);
+  const [ recDel, setRecDel ] = useState(del_recipe);
   useEffect(() => {
     fetchdata();
     console.log(recipes);
@@ -74,7 +78,12 @@ const RecipeCard = () => {
       console.log("Error while finding User", err);
     }
   };
-
+  const clickHandlerDelete = (e) => {
+    console.log(e);
+    setRecDel({...recDel, [e.target.name]: e.target.value});
+    console.log(recDel);
+    recipeDelete(recDel);  
+  }
   return (
     <Row xs={1} md={3} className="g-4 mx-auto" style={{margin: '3% 3%'}}>
       {recipes.map((recipe) => (
@@ -110,7 +119,7 @@ const RecipeCard = () => {
                 </Link>
                 </div>
                 <div style={buttonStyle, {marginLeft: "5%", marginTop: 5 }} >
-                <Button variant="primary">Delete</Button>
+                <Button variant="primary"  onClick={(e) =>clickHandlerDelete(e)} value = {recipe._id} name = "_id" >Delete</Button>
               </div>
               </Row>
             </Card.Body>

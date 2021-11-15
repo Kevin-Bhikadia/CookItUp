@@ -30,7 +30,13 @@ const Header = () => {
             </Link>
             {/* <ToggleTheme/> */}
             <Nav className="ml-auto mx-auto">
-
+            <Link to='/add'>
+                <Nav.Item  className="mr-4">
+                    <Button variant="outline-success">
+                        Add Recipe
+                    </Button>
+                </Nav.Item>
+            </Link>
             <Dropdown
                 style={{
                   marginTop: "1.9%",
@@ -57,13 +63,17 @@ const Header = () => {
                 </Link>
                 </div> : 
                 <div>
-
-                <Link to="/AdminPage">
+                <Link to="/">
                 <Dropdown.Item variant ="light" href="#/action-1" style={{backgroundColor:'none',backgroundImage:'none'}}>View Data</Dropdown.Item>
               </Link>  
               <Link to="/UserLogin">
                 <Dropdown.Item variant ="light" href="#/action-2" style={{backgroundColor:'none',backgroundImage:'none'}}>User Login</Dropdown.Item>
               </Link>
+                <Dropdown.Item onClick={clickHandler}>
+                    <IoMdPower style={{marginRight: 10}}/>
+                         Logout
+                </Dropdown.Item>
+                       
               </div>
               
                 }

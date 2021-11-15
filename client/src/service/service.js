@@ -18,3 +18,14 @@ export const authenticateLogin = async (user) => {
     console.log("Error while calling login api", error);
   }
 };
+
+export const recipeDelete = async(recipe) => {
+  try {
+    console.log(recipe);
+      await axios.post(`${url}/recipe/delete`, recipe);
+      
+  }
+  catch(error) {
+      console.log('Error while calling medicine delete api', error);
+  }
+}
