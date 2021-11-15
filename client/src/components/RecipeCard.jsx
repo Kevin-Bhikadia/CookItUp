@@ -75,6 +75,7 @@ const RecipeCard = () => {
     }
   };
 
+
   return (
     <Row xs={1} md={3} className="g-4 mx-auto" style={{margin: '3% 3%'}}>
       {recipes.map((recipe) => (
