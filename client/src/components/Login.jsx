@@ -58,7 +58,7 @@ const Login = () => {
         }}
       >
         <FiLogIn style={{ color: "black", fontSize: 20 }} className="mr-2" />
-        Login
+        User Login
       </h4>
       <Form>
         <Form.Group as={Col}>

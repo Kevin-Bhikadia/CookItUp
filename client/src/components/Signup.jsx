@@ -47,7 +47,7 @@ const Signup = () => {
         }} className="col-8">
             <h4 style={{color: 'black', display:'flex', justifyContent: "center", alignItems: "center", marginBottom: 15}}>
                 <FiLogIn style={{color: 'black', fontSize: 30}} className="mr-2"/>
-                SignUp
+               User SignUp
             </h4>
             <Form>
                 <Row>
