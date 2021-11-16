@@ -32,7 +32,7 @@ const Header = () => {
             <Nav className="ml-auto mx-auto">
             <Link to='/add'>
                 <Nav.Item  className="mr-4">
-                    <Button variant="outline-success">
+                    <Button variant="dark" style={{height:'2.5rem', marginTop:'0.5rem'}}>
                         Add Recipe
                     </Button>
                 </Nav.Item>
@@ -63,9 +63,7 @@ const Header = () => {
                 </Link>
                 </div> : 
                 <div>
-                <Link to="/">
-                <Dropdown.Item variant ="light" href="#/action-1" style={{backgroundColor:'none',backgroundImage:'none'}}>View Data</Dropdown.Item>
-              </Link>  
+                 
               <Link to="/UserLogin">
                 <Dropdown.Item variant ="light" href="#/action-2" style={{backgroundColor:'none',backgroundImage:'none'}}>User Login</Dropdown.Item>
               </Link>

@@ -1,5 +1,5 @@
 import express from "express";
-import Admin from "../Schema/Admin.js";
+import User from "../Schema/User.js";
 import Recipe from "../Schema/Recipe.js";
 
 const router = express.Router();
@@ -7,18 +7,18 @@ const router = express.Router();
 router.post("/signup", async (req, res, next) => {
   // console.log(req);
 
-  const exist = await Admin.findOne({ username: req.body.username });
+  const exist = await User.findOne({ username: req.body.username });
 
   if (exist) {
     return res.status(401).json("Username already exist");
   }
-  Admin.create({ username: req.body.username, password: req.body.password })
+  User.create({ username: req.body.username, password: req.body.password })
     .then((data) => res.json(data))
     .catch((next) => console.log(next));
 });
 
 router.post("/login", async (req, res, next) => {
-  const user = await Admin.findOne({
+  const user = await User.findOne({
     username: req.body.username,
     password: req.body.password,
   });
