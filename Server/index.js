@@ -20,6 +20,6 @@ const URL = `mongodb+srv://deep:deep@cookitup.jvo9g.mongodb.net/myFirstDatabase?
 
 db(URL);
 
-app.listen(5000, () => {
-  console.log("listening on port 5000");
+app.listen(9000, () => {
+  console.log("listening on port 9000");
 });

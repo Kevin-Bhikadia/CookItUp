@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const url = "http://localhost:5000/api";
+const url = "http://localhost:9000/api";
 
 export const authenticateSignup = async (user) => {
   try {

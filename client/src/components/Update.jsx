@@ -6,8 +6,10 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { recipeDelete } from '../service/service';
 import axios from "axios";
 import Speech from "react-speech";
+import { useHistory } from "react-router-dom";
 
-const url = "http://localhost:5000/api";
+
+const url = "http://localhost:9000/api";
 
 
 const timeStyle = {
@@ -78,17 +80,19 @@ const RecipeCard = () => {
       console.log("Error while finding User", err);
     }
   };
+  // const history = useHistory();
   const clickHandlerDelete = (e) => {
     console.log(e);
     setRecDel({...recDel, [e.target.name]: e.target.value});
     console.log(recDel);
-    recipeDelete(recDel);  
+    recipeDelete(recDel);
+    // history.push("/");
   }
   return (
     <Row xs={1} md={3} className="g-4 mx-auto" style={{margin: '3% 3%'}}>
       {recipes.map((recipe) => (
         <Col className="mb-3">
-          <Card style={{ width: "18rem", height: "40rem", borderWidth: '2px'}} key={recipe.id} className="mx-auto d-flex shadow-lg" border={type_color[recipe.type]}>
+          <Card style={{ width: "auto",padding: "20px", height: "40rem", borderWidth: '2px'}} key={recipe.id} className="mx-auto d-flex shadow-lg" border={type_color[recipe.type]}>
             <Card.Img variant="top" style={{height: "50%"}} src={recipe.photo} />
             <Card.Body >
               <Card.Title style={titleStyle}>

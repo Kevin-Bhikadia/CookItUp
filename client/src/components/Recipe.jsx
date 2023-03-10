@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Speech from "react-speech";
 
-const url = "http://localhost:5000/api";
+const url = "http://localhost:9000/api";
 
 const speechstyle = {
   play: {
